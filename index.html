@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Beautiful Website</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Web God</a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <img src="stars.png" id="stars" />
+      <img src="moon.png" id="moon" />
+      <img src="mountains_behind.png" id="mountains_behind" />
+      <h2 id="text">Welcome Web God</h2>
+      <a href="#" id="btn">Explore</a>
+      <img src="mountains_front.png" id="mountains_front" />
+    </section>
+    <div class="sec" id="sec">
+      <h2>
+        Shoot for the Moon - even if you miss it, you will land among the stars.
+      </h2>
+      <pre>
+
+Tum kab aa rahe ho mulaqaat ke liye?
+Maine chaand roke rakha hai ek raat ke liye.
+Chandni raat ki khushboo hai teri yaadon ki,
+Beet gaye lamhe tere intezaar mein rote-rote.
+Teri aahat ka besabab intezaar hai dil mein,
+Chand se mera rishta hai, adhura, anokha sa.
+          
+Chaand se poochta hoon, kya woh tera aashiq hai?
+Jo har raat teri yaadon mein khoya rehta hai.
+Dil ko sukoon milta hai teri muskurahat se,
+Chaand pe tera chehra hai, chamakta, haseen sa.
+          
+Tumse milne ki raat hai, aasmaan bhi bekaraar hai,
+Maine chaand roke rakha hai ek raat ke liye.
+Zameen pe bekhauf uth rahi hai mohabbat ki sada,
+Tum aaoge mere dil ki dhadkan bane, woh saath lekar.
+          
+Chaandni ki roshni mein tera intezaar hai,
+Dil mein hai ummeed, saath leke aayega tu.
+Raat ki raahon mein badhta hai mere khwaab ka silsila,
+Maine chaand roke rakha hai, bas tera intezaar hai.
+          
+Tum kab aa rahe ho mulaqaat ke liye?
+Maine chaand roke rakha hai ek raat ke liye.
+Aa jaao mere saath, chaandni raat mein kho jayein,
+Dil se dil milakar, pyaar ki baat keh jayein.
+          
+Chaand se hoga humara milan,
+Aasmaan ki oonchaiyon tak le jayenge humein.
+Raat ki tanhai mein saath chaleinge haathon mein haath,
+Maine chaand roke rakha hai, bas intezaar hai tera.
+          
+Tumse milne ki raat hai, aasmaan bhi bekaraar hai,
+Maine chaand roke rakha hai ek raat ke liye.
+Aaoge toh sajegi duniya, hogi khushiyaan saath,
+Chaand pe likhi hogi hamari kismat ki raat.          
+          </pre
+      >
+    </div>
+    <script>
+      let stars = document.getElementById("stars");
+      let moon = document.getElementById("moon");
+      let mountains_behind = document.getElementById("mountains_behind");
+      let text = document.getElementById("text");
+      let btn = document.getElementById("btn");
+      let mountains_front = document.getElementById("mountains_front");
+      let header = document.querySelector("header");
+
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + "px";
+        moon.style.top = value * 1.05 + "px";
+        mountains_behind.style.top = value * 0.5 + "px";
+        mountains_front.style.top = value * 0 + "px";
+        text.style.marginRight = value * 4 + "px";
+        text.style.marginTop = value * 1.5 + "px";
+        btn.style.marginTop = value * 1.5 + "px";
+        header.style.top = value * 0.5 + "px";
+      });
+    </script>
+  </body>
+</html>
